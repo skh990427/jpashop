@@ -37,5 +37,6 @@ out/
 .vscode/
 
 src/main/resources/application.properties
+src/main/resources/static/*
 
 src/test/resources/application.properties
