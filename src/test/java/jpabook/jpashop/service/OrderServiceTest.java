@@ -8,7 +8,6 @@ import jpabook.jpashop.domain.item.Book;
 import jpabook.jpashop.domain.item.Item;
 import jpabook.jpashop.exception.NotEnoughStockException;
 import jpabook.jpashop.repository.OrderRepository;
-import org.junit.Assert;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,7 +62,7 @@ class OrderServiceTest {
         int orderCount = 11;
 
         //when
-        Assert.assertThrows(NotEnoughStockException.class, () -> orderService.order(member.getId(), item.getId(), orderCount));
+        assertThrows(NotEnoughStockException.class, () -> orderService.order(member.getId(), item.getId(), orderCount));
         //then
 //        fail("재고 수량 부족 예외가 발생해야 한다");
 //        Assert.assertThrows() 함수를 통해 발생시키고자 하는 Exception class와 코드를 적어주면 됩니다.
